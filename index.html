@@ -1,0 +1,32 @@
+---
+layout: default
+title: "Главная"
+---
+					<div class="panel panel-default">
+						<div class="panel-body">
+							<h1>{{ post.title }}</h1>
+							<div class="well text-justify">
+								{{ post.excerpt }}
+								<a class="btn btn-default pull-right" href="{{ post.url }}">Читать дальше&nbsp;<span class="glyphicon glyphicon glyphicon-eye-open"></span></a>
+							</div>
+						</div>
+						<div class="panel-footer">
+							<span class="glyphicon glyphicon-calendar"></span>&nbsp;<a class="btn btn-default btn-xs" href="/archive/">{{ post.date | date_to_long_string }}</a>
+							<span class="pull-right">
+								<div class="social-likes social-likes_single" data-counters="no" data-single-title="Share">
+									<div class="facebook" title="Поделиться ссылкой на Фейсбуке">Facebook</div>
+									<div class="twitter" title="Поделиться ссылкой в Твиттере">Twitter</div>
+									<div class="mailru" title="Поделиться ссылкой в Моём мире">Мой мир</div>
+									<div class="vkontakte" title="Поделиться ссылкой во Вконтакте">Вконтакте</div>
+									<div class="odnoklassniki" title="Поделиться ссылкой в Одноклассниках">Одноклассники</div>
+									<div class="plusone" title="Поделиться ссылкой в Гугл-плюсе">Google+</div>
+									<div class="pinterest" title="Поделиться картинкой на Пинтересте" data-media="">Pinterest</div>
+								</div>
+							</span>
+						</div>
+					</div>{% endfor %}
+					<ul class="pager">
+						<li class="previous"><a href="{{ paginator.previous_page_path }}"><span class="glyphicon glyphicon-arrow-left"></span>&nbsp;Сюда</a></li>
+						<li><a href="/archive"><span class="glyphicon glyphicon-list-alt"></span>&nbsp;Страница {{ paginator.page }} из {{ paginator.total_pages }}</a></li>
+						<li class="next"><a href="{{ paginator.next_page_path }}">Туда&nbsp;<span class="glyphicon glyphicon-arrow-right"></span></a></li>
+					</ul>

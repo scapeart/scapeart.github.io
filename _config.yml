@@ -1,0 +1,7 @@
+name: ScapeArt
+url: http://scapeart.github.io
+markdown: kramdown
+permalink: archive/:year/:month/:title.html
+exclude: [README.md]
+paginate: 3
+paginate_path: "index/page:num"
