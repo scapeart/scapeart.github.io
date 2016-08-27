@@ -2,7 +2,7 @@
 layout: default
 title: "Главная"
 ---
-					<div class="panel panel-default">
+					{% for post in paginator.posts %}<div class="panel panel-default">
 						<div class="panel-body">
 							<h1>{{ post.title }}</h1>
 							<div class="well text-justify">
