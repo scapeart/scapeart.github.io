@@ -2,7 +2,7 @@
 layout: default
 title: "Главная"
 ---
-					{% for post in site.categories.post %}
+					{% for post in site.categories.article %}
 					<div class="panel panel-default">
 						<div class="panel-body">
 							<h1>{{ post.title }}</h1>
@@ -15,9 +15,3 @@ title: "Главная"
 							<span class="glyphicon glyphicon-calendar"></span>&nbsp;<a class="btn btn-default btn-xs" href="/archive/">{{ post.date | date_to_long_string }}</a>
 						</div>
 					</div>{% endfor %}
-					<hr>
-					<ul class="pager">
-						<li class="previous"><a href="{{ paginator.previous_page_path }}"><span class="glyphicon glyphicon-arrow-left"></span>&nbsp;Сюда</a></li>
-						<li><a href="/archive"><span class="glyphicon glyphicon-list-alt"></span>&nbsp;Страница {{ paginator.page }} из {{ paginator.total_pages }}</a></li>
-						<li class="next"><a href="{{ paginator.next_page_path }}">Туда&nbsp;<span class="glyphicon glyphicon-arrow-right"></span></a></li>
-					</ul>

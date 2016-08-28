@@ -1,0 +1,17 @@
+---
+layout: default
+title: "Главная"
+---
+					{% for post in site.categories.post %}
+					<div class="panel panel-default">
+						<div class="panel-body">
+							<h1>{{ post.title }}</h1>
+							<div class="well text-justify">
+								{{ post.excerpt }}
+								<a class="btn btn-default pull-right" href="{{ post.url }}">Читать дальше&nbsp;<span class="glyphicon glyphicon glyphicon-eye-open"></span></a>
+							</div>
+						</div>
+						<div class="panel-footer">
+							<span class="glyphicon glyphicon-calendar"></span>&nbsp;<a class="btn btn-default btn-xs" href="/archive/">{{ post.date | date_to_long_string }}</a>
+						</div>
+					</div>{% endfor %}
