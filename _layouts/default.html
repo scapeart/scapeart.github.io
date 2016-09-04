@@ -5,12 +5,23 @@
 <title>{{ site.name }}: {{ page.title }}</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script type="text/javascript" src="//yastatic.net/jquery/2.2.3/jquery.min.js"></script>
+<script type="text/javascript" src="//yastatic.net/jquery/fancybox/2.1.4/jquery.fancybox.min.js"></script>
 <script type="text/javascript" src="//yastatic.net/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="/data/social-likes.min.js"></script>
-<script type="text/javascript" src="//yastatic.net/jquery/fancybox/2.1.4/jquery.fancybox.min.js"></script>
+<script type="text/javascript">$(document).ready(function() {
+$("a.img-thumbnail").fancybox({
+padding: 5,
+openEffect  : 'none',
+closeEffect: 'none',
+prevEffect : 'none',
+nextEffect : 'none',
+closeBtn  : false,
+helpers : {title : {type : 'inside'},},
+afterLoad : function() {this.title = 'Image ' + (this.index + 1) + ' of ' + this.group.length + (this.title ? ' - ' + this.title : '');}
+});</script>
 <link rel="stylesheet" type="text/css" href="/data/style.css">
-<link rel="stylesheet" type="text/css" href="//yastatic.net/jquery/fancybox/2.1.4/jquery.fancybox.min.css">
 <link rel="stylesheet" type="text/css" href="//yastatic.net/bootstrap/3.3.6/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="//yastatic.net/jquery/fancybox/2.1.4/jquery.fancybox.min.css">
 <link rel="stylesheet" type="text/css" href="/data/social-likes_classic.css">
 <meta name='yandex-verification' content=''/>
 </head>
