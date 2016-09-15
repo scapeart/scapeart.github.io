@@ -10,16 +10,6 @@ layout: default
 						</div>
 						<div class="panel-footer">
 							<span class="glyphicon glyphicon-calendar"></span>&nbsp;<a class="btn btn-default btn-xs" href="/archive/">{{ page.date | date_to_long_string }}</a>
-							<span class="pull-right">
-								<div class="social-likes social-likes_single" data-counters="no" data-single-title="Share">
-									<div class="facebook" title="Поделиться ссылкой на Фейсбуке">Facebook</div>
-									<div class="twitter" title="Поделиться ссылкой в Твиттере">Twitter</div>
-									<div class="mailru" title="Поделиться ссылкой в Моём мире">Мой мир</div>
-									<div class="vkontakte" title="Поделиться ссылкой во Вконтакте">Вконтакте</div>
-									<div class="odnoklassniki" title="Поделиться ссылкой в Одноклассниках">Одноклассники</div>
-									<div class="plusone" title="Поделиться ссылкой в Гугл-плюсе">Google+</div>
-									<div class="pinterest" title="Поделиться картинкой на Пинтересте" data-media="">Pinterest</div>
-								</div>
-							</span>
+							{% include share.html %}
 						</div>
 					</div>
