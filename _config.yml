@@ -5,3 +5,5 @@ permalink: /:year/:month/:title.html
 exclude: [README.md]
 paginate: 3
 paginate_path: "index/page:num"
+gems:
+  - jekyll-sitemap
