@@ -6,4 +6,6 @@ exclude: [README.md]
 paginate: 3
 paginate_path: "index/page:num"
 gems:
+  - jekyll-paginate
   - jekyll-sitemap
+  - jekyll-feed
