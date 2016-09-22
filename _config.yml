@@ -9,3 +9,5 @@ gems:
   - jekyll-paginate
   - jekyll-sitemap
   - jekyll-feed
+feed:
+  path: atom.xml
