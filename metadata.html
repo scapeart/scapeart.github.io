@@ -8,6 +8,10 @@ title: "Metadata"
 								{{ site.github.project_title }}
 								
 								{{ site.github.contributors }}
+								
+								{% for repository in site.github.contributors %}
+									 {{ repository.login }}
+								{% endfor %}
 							</div>
 						</div>
 						<div class="panel-footer"></div>
