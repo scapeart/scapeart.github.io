@@ -7,10 +7,8 @@ title: "Metadata"
 							<div class="well text-justify">
 								{{ site.github.project_title }}
 								
-								{{ site.github.contributors }}
-								
-								{% for repository in site.github.contributors %}
-									 {{ repository.login }}
+								{% for users in site.github.contributors %}
+									 {{ users.login }}
 								{% endfor %}
 							</div>
 						</div>
