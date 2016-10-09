@@ -2,16 +2,11 @@
 layout: default
 title: "Главная"
 ---
-					{% for post in site.categories.article %}
 					<div class="panel panel-default">
 						<div class="panel-body">
-							<h1>{{ post.title }}</h1>
 							<div class="well text-justify">
-								{{ post.excerpt }}
-								<a class="btn btn-default pull-right" href="{{ post.url }}">Читать дальше&nbsp;<span class="glyphicon glyphicon glyphicon-eye-open"></span></a>
+								<div class="list-group">{% for post in site.categories.article %}<a href="{{ post.url }}" class="list-group-item">{{ post.title }}<span class="label label-default pull-right">{{ post.date | date_to_long_string}}</span></a>{% endfor %}</div>
 							</div>
 						</div>
-						<div class="panel-footer">
-							<span class="glyphicon glyphicon-calendar"></span>&nbsp;<a class="btn btn-default btn-xs" href="/archive.html">{{ post.date | date_to_long_string }}</a>
-						</div>
-					</div>{% endfor %}
+						<div class="panel-footer"></div>
+					</div>
