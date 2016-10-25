@@ -177,3 +177,10 @@ a.img-thumbnail.active {
 .navbar-brand:hover {
   fill: #5e5e5e;
  }
+
+.navbar-default .navbar-nav>li>a {
+  fill: #777;
+ }
+.navbar-default .navbar-nav>li>a:hover {
+  fill: #5e5e5e;
+ }
