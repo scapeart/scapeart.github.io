@@ -169,3 +169,11 @@ a.img-thumbnail:focus,
 a.img-thumbnail.active {
   border-color: #337ab7 !important;
 }
+
+/* SVG Styles */
+.navbar-brand {
+  fill: #777;
+ }
+.navbar-brand:hover {
+  fill: #5e5e5e;
+ }
