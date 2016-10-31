@@ -8,16 +8,16 @@ title: "Главная"
 							<h1>{{ post.title }}</h1>
 							<div class="well text-justify">
 								{{ post.excerpt }}
-								<a class="btn btn-default pull-right" href="{{ post.url }}">Читать дальше&nbsp;<span class="i-name icon-eye"></span></a>
+								<a class="btn btn-default pull-right" href="{{ post.url }}">Читать дальше&nbsp;<span class="i-eye"></span></a>
 							</div>
 						</div>
 						<div class="panel-footer">
-							<span class="i-name icon-calendar"></span>&nbsp;<a class="btn btn-default btn-xs" href="/archive.html">{{ post.date | date_to_long_string }}</a>
+							<span class="i-calendar"></span>&nbsp;<a class="btn btn-default btn-xs" href="/archive.html">{{ post.date | date_to_long_string }}</a>
 						</div>
 					</div>{% endfor %}
 					<hr>
 					<ul class="pager">
-						<li class="previous"><a href="{{ paginator.previous_page_path }}"><span class="i-name icon-left-big"></span>&nbsp;Сюда</a></li>
-						<li><a href="/archive.html"><span class="i-name icon-list"></span>&nbsp;Страница {{ paginator.page }} из {{ paginator.total_pages }}</a></li>
-						<li class="next"><a href="{{ paginator.next_page_path }}">Туда&nbsp;<span class="i-name icon-right-big"></span></a></li>
+						<li class="previous"><a href="{{ paginator.previous_page_path }}"><span class="i-left"></span>&nbsp;Сюда</a></li>
+						<li><a href="/archive.html"><span class="i-server"></span>&nbsp;Страница {{ paginator.page }} из {{ paginator.total_pages }}</a></li>
+						<li class="next"><a href="{{ paginator.next_page_path }}">Туда&nbsp;<span class="i-right"></span></a></li>
 					</ul>
