@@ -5,7 +5,7 @@ title: "Архив"
 					<div class="panel panel-default">
 						<div class="panel-body">
 							<div class="well text-justify">
-								<div class="list-group">{% for post in site.posts %}<a href="{{ post.url }}" class="list-group-item">{{ post.title }}<span class="label label-default pull-right">{{ post.date | date: "%-d"}} {% assign m = post.date | date: "%-m" %}{% case m %}{% when '1' %}января{% when '2' %}февраля{% when '3' %}марта{% when '4' %}апреля{% when '5' %}мая{% when '6' %}июня{% when '7' %}июля{% when '8' %}августа{% when '9' %}сентября{% when '10' %}октября{% when '11' %}ноября{% when '12' %}декабря{% endcase %} {{ post.date | date: "%Y"}}</span></a>{% endfor %}</div>
+								<div class="list-group">{% for post in site.posts %}<a href="{{ post.url }}" class="list-group-item">{{ post.title }}<span class="label label-default pull-right">{% include post.date.html %}</span></a>{% endfor %}</div>
 							</div>
 						</div>
 						<div class="panel-footer"></div>
