@@ -12,7 +12,7 @@ title: "Главная"
 							</div>
 						</div>
 						<div class="panel-footer">
-							<span class="i-calendar"></span>&nbsp;<a class="btn btn-default btn-xs" href="/archive.html">{{ post.date | date_to_long_string }}</a>
+							<span class="i-calendar"></span>&nbsp;<a class="btn btn-default btn-xs" href="/archive.html">{% include post.date.html %}</a>
 						</div>
 					</div>{% endfor %}
 					<hr>
