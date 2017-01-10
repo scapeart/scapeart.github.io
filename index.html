@@ -6,18 +6,18 @@ title: "Главная"
 					<div class="card">
 						<div class="card-block">
 							<h1>{{ post.title }}</h1>
-							<div class="well text-justify">
+							<div class="card text-justify">
 								{{ post.excerpt }}
-								<a class="btn btn-default pull-right" href="{{ post.url }}">Читать дальше&nbsp;<span class="i-eye"></span></a>
+								<a class="btn btn-primary" href="{{ post.url }}">Читать дальше&nbsp;<span class="i-eye"></span></a>
 							</div>
 						</div>
 						<div class="card-footer">
-							<span class="i-calendar"></span>&nbsp;<a class="btn btn-default btn-xs" href="/archive.html">{% include post.date.html %}</a>
+							<span class="i-calendar"></span>&nbsp;<a class="btn btn-primary btn-sm" href="/archive.html">{% include post.date.html %}</a>
 						</div>
 					</div>{% endfor %}
 					<hr>
 					<ul class="pager">
-						<li class="previous"><a href="{{ paginator.previous_page_path }}"><span class="i-left"></span>&nbsp;Сюда</a></li>
+						<li class="pager-prev"><a href="{{ paginator.previous_page_path }}"><span class="i-left"></span>&nbsp;Сюда</a></li>
 						<li><a href="/archive.html"><span class="i-server"></span>&nbsp;Страница {{ paginator.page }} из {{ paginator.total_pages }}</a></li>
-						<li class="next"><a href="{{ paginator.next_page_path }}">Туда&nbsp;<span class="i-right"></span></a></li>
+						<li class="pager-next"><a href="{{ paginator.next_page_path }}">Туда&nbsp;<span class="i-right"></span></a></li>
 					</ul>
