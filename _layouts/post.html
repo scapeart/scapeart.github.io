@@ -1,14 +1,14 @@
 ---
 layout: default
 ---
-					<div class="panel panel-default">
-						<div class="panel-body">
+					<div class="card">
+						<div class="card-block">
 							<h1>{{ page.title }}</h1>
 							<div class="well text-justify">
 								{{ content }}
 							</div>
 						</div>
-						<div class="panel-footer">
+						<div class="card-footer">
 							<span class="i-calendar"></span>&nbsp;<a class="btn btn-default btn-xs" href="/archive.html">{{ page.date | date_to_long_string }}</a>
 							{% include share.html %}
 						</div>
