@@ -3,15 +3,15 @@ layout: default
 title: "Главная"
 ---
 					{% for post in paginator.posts %}
-					<div class="panel panel-default">
-						<div class="panel-body">
+					<div class="card">
+						<div class="card-block">
 							<h1>{{ post.title }}</h1>
 							<div class="well text-justify">
 								{{ post.excerpt }}
 								<a class="btn btn-default pull-right" href="{{ post.url }}">Читать дальше&nbsp;<span class="i-eye"></span></a>
 							</div>
 						</div>
-						<div class="panel-footer">
+						<div class="card-footer">
 							<span class="i-calendar"></span>&nbsp;<a class="btn btn-default btn-xs" href="/archive.html">{% include post.date.html %}</a>
 						</div>
 					</div>{% endfor %}
