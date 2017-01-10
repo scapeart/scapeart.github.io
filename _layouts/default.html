@@ -3,7 +3,8 @@
 <head>
 <meta charset="utf-8">
 <title>{{ site.name }}: {{ page.title }}</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
 <meta property="og:url" content="[URL]">
 <meta property="og:title" content="[TITLE]">
 <link rel="alternate" type="application/atom+xml" href="/atom.xml" title="ScapeArt">
@@ -30,7 +31,7 @@ afterLoad : function() {this.title = 'Image ' + (this.index + 1) + ' of ' + this
 <div class="container">
 	<div class="row">
 		<div class="col-md-12">
-			<div class="well well-sm">
+			<div class="card">
 {% include headpic.html %}
 {% include navbar.html %}
 				{{ content }}
